@@ -1,15 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
+    <!-- Remove fieldset borders, refer to the solution in stackoverflow, 
+        link: https://stackoverflow.com/questions/4230375/whats-the-easiest-way-to-remove-fieldset-border -lines -->
+    <style>
+        .fieldset {
+            border: 0 none;
+        }
+    </style>
+
 </head>
+
 <body>
-    <div>
-        <p>FEEDBACK</p>
-        
-    </div>
-    
+
+    <table width="100%" bgcolor="#FBEEEE" style="margin-top: 25px;">
+        <td width="10%"></td>
+        <td>
+            <br>
+            <form name="feedback" action="thankyou.html" target="_self" method="post" >
+                <fieldset class="fieldset">
+                    <legend><strong>
+                            <font color="#9B3333">FEEDBACK</font>
+                        </strong></legend>
+                    <table>
+                        <tr></tr>
+                        <tr>
+                            <td>
+                                <label for="caseID"><strong>CaseID:</strong></label>
+                            </td>
+                            <td width="25%"></td>
+                            <td>
+                                <input type="text" id="caseID" placeholder="please input ur CaseID">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="subject"><strong>Subject:</strong></label><span style="color: red;"><strong>*</strong></span>
+                            </td>
+                            <td width="25%"></td>
+                            <td>
+                                <input type="text" id="subject" name="subject" size="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <label for="comment"><strong>Comment:</strong></label>
+                            </td>
+                            <td width="25%"></td>
+                            <td>
+                                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <label for="importance"><strong>Importance:</strong></label>
+                            </td>
+                            <td width="25%"></td>
+                            <td>
+                                <label for="high"></label>
+                                <input type="radio" id="high" name="importance">High
+                                <br>
+                                <label for="mid"></label>
+                                <input type="radio" id="mid" name="importance">Medium
+                                <br>
+                                <label for="low"></label>
+                                <input type="radio" id="low" name="importance" checked>Low
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td width="25%"></td>
+                            <td>
+                                <button type="submit">submit</button>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </fieldset>
+
+            </form>
+
+        </td>
+
+    </table>
+
 </body>
+
 </html>
