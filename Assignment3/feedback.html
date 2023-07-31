@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #B8666B;
+            padding-left: 180px;
+            padding-right: 180px;
+
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .leftfix {
+            float: left;
+        }
+
+        .rightfix {
+            float: left;
+        }
+
+        .container {
+            width: 80%;
+            height: 400px;
+
+            border: 2px solid #B8666B;
+            margin: 0 auto;
+            text-align: center
+                /* 内框颜色是#A23035 */
+                /* please颜色是 #EFE7E1*/
+                /* 内容#EFE7E1 */
+                /* 脚是#F7E8E6 */
+        }
+       
+
+        .header {
+            width: 100%;
+            background-color: white;
+        }
+
+        .logo {
+
+            background-color: white;
+        }
+
+        .content {
+            width: 100%;
+            background-color: #A23035;
+
+        }
+
+        ul li {
+            list-style-image: url("image/arrow.gif");
+
+            margin: 0 auto;
+            padding-left: 20px;
+
+            margin-left: 20px;
+            text-decoration: underline;
+            color: yellow;
+        }
+
+        .feedbackword {
+            display: inline-block;
+            margin-left: 50px;
+            text-decoration: underline;
+            color: yellow;
+
+        }
+
+        .chart {
+            width: 70%;
+            background-color: #EFE7E1;
+            height: 500px;
+            margin-right: 20px;
+            border: 1px solid #A23035;
+            margin-left: 20%;
+            text-align: center;
+
+        }
+
+        #tip {
+            margin-top: 2%;
+            margin-left: 3.4%;
+            font-weight: bold;
+            text-align: left;
+            padding-bottom: 3%;
+        }
+
+        /* 
+        Solution to replace the button style, 
+        refer to the documentation: https://www.w3docs.com/snippets/css/how-to-change-input-and-button-images-with-css.html
+        */
+        .btn_submit {
+            background: url('./image/btn_submit.gif') no-repeat;
+            cursor: pointer;
+            width: 57px;
+            height: 17px;
+            border: none;
+            padding: 0;
+        }
+
+        .fieldset {
+            border: 0 none;
+        }
+
+        .table1 {
+            /* margin-top: 3%; */
+            /* margin-left: 4%; */
+            width: 93%;
+            height: 75%;
+            margin-bottom: 10px;
+            margin: 0 auto;
+
+
+        }
+
+        td {
+            text-align: left;
+
+        }
+
+        td #shifttop {
+            margin-top: 50px;
+        }
+
+
+
+        legend {
+            margin-bottom: 30px;
+            font-size: larger;
+
+
+        }
+
+        .footer {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #F7E8E6;
+            width: 100%;
+            height: 40px;
+            /* flex box */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* display: table-cell;
+            text-align: center;
+            vertical-align: middle; */
+
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <!-- head -->
+        <div class="header leftfix">
+            <!-- 图标 -->
+            <div class="logo leftfix">
+                <img src="./image/umd_logo.png" alt="umd_logo">
+            </div>
+
+        </div>
+        <!-- 主要内容 -->
+        <div class="content clearfix">
+            <!-- 左边列表 -->
+            <nav class="nav leftfix">
+                <ul>
+                    <li>
+                        Feedback
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 右边主要内容 -->
+            <div class="chart rightfix">
+                <div id="tip">
+                    Please complete following form
+                </div>
+                <table class="table1" bgcolor="#FBEEEE">
+                    <td width="10%"></td>
+                    <td id="shift-top">
+                        <form name="feedback" action="thankyou.html" method="post">
+
+                            <fieldset class="fieldset">
+                                <legend><strong>
+                                        <font color="#9B3333">FEEDBACK</font>
+                                    </strong></legend>
+                                <table id="first_t">
+                                    <tr>
+                                        <td style="text-align: left;">
+                                            <label for="caseID"><strong>CaseID:</strong></label>
+                                        </td>
+                                        <!-- <td width="5px"></td> -->
+                                        <td>
+                                            <input type="text" id="caseID" value="34564">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;">
+                                            <label for="subject"><strong>Subject:</strong></label><span
+                                                style="color: red;"><strong>*</strong></span>
+                                        </td>
+                                        <!-- <td width="5px"></td> -->
+                                        <td>
+                                            <input type="text" id="subject" name="subject" style="width: 300%;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="text-align: left;">
+                                            <label for="comment"><strong>Comment:</strong></label><span
+                                                style="color: red;"><strong>*</strong></span>
+                                        </td>
+                                        <!-- <td width="5px"></td> -->
+                                        <td>
+                                            <textarea name="comment" id="comment" cols="30" rows="10"
+                                                style="width: 200%; height: 200px;"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <!-- <td width="25%"></td> -->
+                                        <td>
+                                            <input type="submit" class="btn_submit" value="" />
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </form>
+                    </td>
+
+                </table>
+
+            </div>
+
+
+        </div>
+        <div class="footer">
+            <footer>
+                <div>Copyright &copy;UMD. All Right Reserved. </div>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
