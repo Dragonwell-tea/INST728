@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        
+
+        body {
+            background-image: url('./img/mainBgrnd.gif');
+            background-repeat: repeat;
+            /* background-color: skyblue; */
+                        
+        }
+
+        .container {
+            /* width: 1550px; */
+            width: 100%;
+            margin: 0 auto;
+          
+
+        }
+
+        .leftfix {
+            float: left;
+        }
+
+        .rightfix {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .header {
+
+            border: 2px solid #B8666B;
+            background-color: white;
+            /* height: 80px; */
+            line-height: 80px;
+            display: flex;
+            align-items: center;
+            /* test */
+            width: 80%;
+            margin: auto;
+        
+
+
+        }
+
+        
+
+        .header img {
+            vertical-align: middle;
+
+        }
+
+      
+
+        .content .container {
+            
+            /* height: 600px; */
+            background-image: url("./img/bg1.gif");
+            /* test */
+            width: 80%;
+            height: 800px;
+            height: auto;
+            
+
+        }
+
+        .nav {
+         
+            height: 590px;
+            padding-top: 10px;
+            padding-left: 70px;
+            /* background-color: orange; */
+        }
+
+        .nav ul li {
+            list-style-image: url("./img/arrow.gif");
+            margin: 0 auto;
+            text-decoration: underline;
+            color: yellow;
+            margin-bottom: 10px;
+        }
+
+        .nav ul li a {
+            display: inline-block;
+
+            font-weight: bold;
+            color: yellow;
+        }
+
+        .nav ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .chart {
+            margin-right: 60px;
+            /* height: 596px;
+            width: 1000px; */
+            background-color: #EFE7E1;
+            border-style: solid;
+            border-width: 2px 0;
+            border-color: #A23035;
+            /* test */
+            width: 70%;
+            
+            height: auto;
+            padding-bottom: 600px;
+        }
+
+        .chart .title {
+            height: 80px;
+            line-height: 80px;
+            /* background-color: skyblue; */
+            padding-left: 60px;
+            font-weight: bold;
+
+        }
+
+        .chart .org_img {
+
+            /* height: 800px; */
+            
+
+            /*            
+            background-color: skyblue; */
+            position: relative;
+
+        }
+
+        .chart .org_img img {
+            
+            /* width: 60%; */
+            /* height: auto; */
+            position: absolute;
+            top: 10px;
+            left: 60px;
+
+            /* 测试 */
+            /* width: 60%; */
+            
+        }
+
+        footer {
+            height: 50px;
+            line-height: 50px;
+            background-color: #F7E8E6;
+            font-weight: bold;
+            /* 测试 */
+            width: 80%;
+            margin: auto;
+        }
+
+        footer p {
+            text-align: center;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="body1" >
+        <div class="container">
+            <div class="header clearfix">
+                <div class="container">
+                    <img src="./img/umdlogo.gif" alt="umd_logo" class="leftfix">
+
+                </div>
+                
+            </div>
+        </div>
+        <div class="content">
+            <div class="container clearfix">
+                <!-- left nav bar -->
+                <div class="nav leftfix">
+                    <ul>
+                        <li><a href="#">Payroll Information</a></li>
+                        <li><a href="#">Performance ppraisal</a></li>
+                        <li><a href="#">TimeSheet</a></li>
+                        <li><a href="#">Leave Manangement</a></li>
+                        <li><a href="#">Health Benefits</a></li>
+                        <li><a href="./orgchart.html">Organization Chart</a></li>
+                        <li><a href="#">Access Manangement</a></li>
+                        <li><a href="#">Career Development</a></li>
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Expense Reimbursement</a></li>
+                        <li><a href="#">Retirement Planning</a></li>
+                        <li><a href="#">Ticket manangement</a></li>
+                        <li><a href="#">Documents</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+
+                </div>
+                <!-- right diagram -->
+                <div class="chart rightfix">
+                    <div class="title">
+                        <span>Organization Chart</span>
+                    </div>
+                    <div class="org_img">
+                        <img src="./img/org.png" alt="">
+
+                    </div>
+
+
+                </div>
+                <div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- footer -->
+      
+            <div class="container">
+                <footer>
+
+                    <p>Copyright &copy;UMD. All Right Reserved. </p>
+
+                </footer>
+               
+
+            </div>
+            
+      
+    </div>
+
+</body>
+
+</html>

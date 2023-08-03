@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background-image: url('./img/mainBgrnd.gif');
+            background-repeat: repeat;
+            /* background-color: skyblue; */
+
+        }
+
+        .container {
+            width: 1550px;
+            
+            margin: 0 auto;
+
+        }
+
+        .leftfix {
+            float: left;
+        }
+
+        .rightfix {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .header {
+
+            border: 2px solid #B8666B;
+            background-color: white;
+            height: 80px;
+            line-height: 80px;
+            display: flex;
+            align-items: center;
+
+        }
+
+      
+        .header img {
+            vertical-align: middle;
+
+        }
+
+
+
+        .content .container {
+            height: 600px;
+            background-image: url("./img/bg1.gif");
+
+        }
+
+        .nav {
+            /* container height-10 */
+            height: 590px;
+            padding-top: 10px;
+            padding-left: 70px;
+            /* background-color: orange; */
+        }
+
+        .nav ul li {
+            list-style-image: url("./img/arrow.gif");
+            margin: 0 auto;
+            text-decoration: underline;
+            color: yellow;
+            margin-bottom: 10px;
+        }
+
+        .nav ul li a {
+            display: inline-block;
+
+            font-weight: bold;
+            color: yellow;
+        }
+
+        .nav ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .chart {
+            margin-right: 60px;
+            height: 596px;
+            width: 1100px;
+            
+         
+            background-color: #EFE7E1;
+            border-style: solid;
+            border-width: 2px 0;
+            border-color: #A23035;
+
+            position: relative;
+        }
+
+        .chart .title {
+            height: 80px;
+            line-height: 80px;
+            /* background-color: skyblue; */
+            padding-left: 60px;
+            font-weight: bold;
+
+        }
+
+        footer {
+            height: 50px;
+            line-height: 50px;
+            background-color: #F7E8E6;
+            font-weight: bold;
+        }
+
+        footer p {
+            text-align: center;
+
+        }
+
+        .table1 {
+            background-color: #FBEEEE;
+            width: 980px;
+
+            padding: 0px 100px;
+            position: absolute;
+            left: 60px;
+            top: 100px;
+            height: 460px;
+
+        }
+
+        .table1 .fieldset {
+            border: 0 none;
+
+        }
+
+        .fieldset legend {
+            font-size: 25px;
+        }
+
+
+
+        .form_class {
+
+            position: relative;
+            top: -10px;
+            left: 60px;
+        }
+
+        #first_t input[type="text"] {
+            height: 30px;
+        }
+
+        input[type="text"],
+        textarea {
+
+            font-size: large;
+        }
+
+        #first_t label {
+            font-size: 20px;
+
+        }
+
+        .btn_submit {
+            background: url('./img/btn_submit.gif') no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+            width: 70px;
+            height: 25px;
+            border: none;
+            padding: 0;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+
+        
+            function validate() {
+                if (document.feedback.caseid.value == "") {
+                    // console.log("CaseID is empty.");
+                    alert("you forget ur id!")
+                    document.feedback.caseid.focus();
+                    return false;
+                }
+                if (document.feedback.subjects.value == "") {
+                    // console.log("Subject is empty.");
+                    alert("plz input ur course number")
+                    document.feedback.subjects.focus();
+                    return false;
+                }
+                if (document.feedback.comments.value == "") {
+                    // console.log("Comment is empty.");
+                    alert("don't forget input ur comments! Thanks")
+                    document.feedback.comments.focus();
+                    return false;
+                }
+
+                return ( true );
+                
+            }
+            
+      
+
+
+    </script>
+
+</head>
+
+<body>
+    <div class="body1">
+        <div class="container">
+            <div class="header clearfix">
+                <div class="container">
+                    <img src="./img/umdlogo.gif" alt="umd_logo" class="leftfix">
+
+                </div>
+                
+            </div>
+        </div>
+        <div class="content">
+            <div class="container clearfix">
+                <!-- left nav bar -->
+                <div class="nav leftfix">
+                    <ul>
+                        <li><a href="#">Payroll Information</a></li>
+                        <li><a href="#">Performance ppraisal</a></li>
+                        <li><a href="#">TimeSheet</a></li>
+                        <li><a href="#">Leave Manangement</a></li>
+                        <li><a href="#">Health Benefits</a></li>
+                        <li><a href="./orgchart.html">Organization Chart</a></li>
+                        <li><a href="#">Access Manangement</a></li>
+                        <li><a href="#">Career Development</a></li>
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Expense Reimbursement</a></li>
+                        <li><a href="#">Retirement Planning</a></li>
+                        <li><a href="#">Ticket manangement</a></li>
+                        <li><a href="#">Documents</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+
+                </div>
+                <!-- right diagram -->
+                <div class="chart rightfix">
+                    <div class="title">
+                        <span style="font-size: 20px;">Please complete following form</span>
+                    </div>
+                    <!-- <div class="t1"> -->
+                    <!-- <img src="./org.png" alt=""> -->
+                    <table class="table1">
+                        <td>
+                            <form name="feedback" action="thankyou.html" class="form_class" onsubmit="return(validate());">
+                                <fieldset class="fieldset">
+                                    <legend><strong>
+                                            <font color="#9B3333">FEEDBACK</font>
+                                        </strong></legend>
+                                    <table id="first_t">
+                                        <tr style="height: 25px;"></tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <label for="caseID"><strong>CaseID:</strong></label>
+                                            </td>
+                                            <!-- <td style="text-align: left;"><strong>CaseID:</strong></td> -->
+                                            <!-- <td width="5px"></td> -->
+                                            <td>
+                                                <input type="text" id="caseID" name="caseid" size="20">
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 5px;"></tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <label for="subject"><strong>Subject:</strong></label><span style="color: red;"><strong>*</strong></span>
+                                            </td>
+                                            <!-- <td width="5px"></td> -->
+                                            <td>
+                                                <input type="text" id="subject" name="subjects" size="60">
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 5px;"></tr>
+                                        <tr>
+                                            <td valign="top" style="text-align: left;">
+                                                <label for="comment"><strong>Comment:</strong></label><span style="color: red;"><strong>*</strong></span>
+                                            </td>
+                                            <!-- <td width="5px"></td> -->
+                                            <td>
+                                                <textarea name="comments" id="comment" cols="50" rows="12"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 5px;"></tr>
+                                        <tr>
+                                            <td></td>
+                                            <!-- <td width="25%"></td> -->
+                                            <td>
+                                                <input type="submit" class="btn_submit" value="" />
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                            </form>
+                        </td>
+
+                    </table>
+
+                    <!-- </div> -->
+
+
+                </div>
+                <div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- footer -->
+
+        <div class="container">
+            <footer>
+
+                <p>Copyright &copy;UMD. All Right Reserved. </p>
+
+            </footer>
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
